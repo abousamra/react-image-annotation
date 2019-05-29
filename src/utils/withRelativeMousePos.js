@@ -10,8 +10,8 @@ const withRelativeMousePos = (key = 'relativeMousePos') => DecoratedComponent =>
 
     onMouseMove = (e) => {
       this.setState({
-        x: (e.nativeEvent.offsetX / this.container.width) * 100,
-        y: (e.nativeEvent.offsetY / this.container.height) * 100,
+        x: e.nativeEvent.offsetX,
+        y: e.nativeEvent.offsetY,
       })
     }
 
